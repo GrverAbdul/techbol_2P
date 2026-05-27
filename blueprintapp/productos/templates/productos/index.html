@@ -20,7 +20,8 @@
         <td>{{ p.stock }}</td>
         <td>
             <a class="btn btn-warning btn-sm" href="/productos/edit/{{p.id}}">Editar</a>
-            <a class="btn btn-danger btn-sm" href="/productos/delete/{{p.id}}">Eliminar</a>
+            <a class="btn btn-danger btn-sm" href="/productos/delete/{{p.id}}"
+            onclick="return confirm('¿Seguro que deseas eliminar este registro?')">Eliminar</a>
         </td>
     </tr>
     {% endfor %}

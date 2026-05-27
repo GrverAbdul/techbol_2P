@@ -21,7 +21,8 @@
         <td>{{ p.cliente.nombre }}</td>
         <td>{{ p.producto.nombre }}</td>
         <td>
-            <a class="btn btn-danger btn-sm" href="/pedidos/delete/{{p.id}}">Eliminar</a>
+            <a class="btn btn-danger btn-sm" href="/pedidos/delete/{{p.id}}" 
+            onclick="return confirm('¿Seguro que deseas eliminar este registro?')">Eliminar</a>
         </td>
     </tr>
     {% endfor %}

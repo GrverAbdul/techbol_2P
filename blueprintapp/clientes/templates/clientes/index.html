@@ -18,7 +18,8 @@
         <td>{{ c.telefono }}</td>
         <td>
             <a class="btn btn-warning btn-sm" href="/clientes/edit/{{c.id}}">Editar</a>
-            <a class="btn btn-danger btn-sm" href="/clientes/delete/{{c.id}}">Eliminar</a>
+            <a class="btn btn-danger btn-sm" href="/clientes/delete/{{c.id}}"
+            onclick="return confirm('¿Seguro que deseas eliminar este registro?')">Eliminar</a>
         </td>
     </tr>
     {% endfor %}
