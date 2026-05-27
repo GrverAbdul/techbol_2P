@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Pedidos</h2>
+
+<a class="btn btn-primary mb-2" href="/pedidos/create">Nuevo pedido</a>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Fecha</th>
+        <th>Monto</th>
+        <th>Cliente</th>
+        <th>Producto</th>
+        <th>Acciones</th>
+    </tr>
+
+    {% for p in pedidos %}
+    <tr>
+        <td>{{ p.fecha }}</td>
+        <td>{{ p.monto }}</td>
+        <td>{{ p.cliente.nombre }}</td>
+        <td>{{ p.producto.nombre }}</td>
+        <td>
+            <a class="btn btn-danger btn-sm" href="/pedidos/delete/{{p.id}}">Eliminar</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
