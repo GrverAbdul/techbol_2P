@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Sistema TechBol</h1>
+
+<p>gestión de inventario y ventas</p>
+
+<ul>
+    <li><a href="{{ url_for('bp_clientes.index') }}">Clientes</a></li>
+    <li><a href="{{ url_for('bp_productos.index') }}">Productos</a></li>
+    <li><a href="{{ url_for('bp_pedidos.index') }}">Pedidos</a></li>
+</ul>
+
+{% endblock %}
